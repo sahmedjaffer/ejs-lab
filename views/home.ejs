@@ -7,5 +7,17 @@
 </head>
 <body>
   <h1>Home Page</h1>
+
+  <h1>We are rendering a page!</h1>
+  <h1>قائمة المطاعم</h1>
+  <ul>
+    <% RESTAURANT.forEach((rest) => { %>
+      <li>
+        <strong><%= rest.name %></strong><br>
+        <span>📍 <%= rest.address %></span>
+      </li>
+    <% }) %>
+  </ul>
+
 </body>
 </html>

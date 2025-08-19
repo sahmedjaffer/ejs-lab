@@ -3,9 +3,7 @@ const logger = require('morgan')
 const app = express();
 app.use(logger('dev'));
 
-app.get('/', (req, res) => {
-  res.send('Hello There!');
-});
+
 
 app.listen(3000);
 
@@ -58,5 +56,9 @@ const RESTAURANT = {
     ]
   }
 
-  
+  app.get('/', (req, res) => {
+    res.render('home.ejs', { 
+      RESTAURANT : RESTAURANT 
+    });
+  });
   
